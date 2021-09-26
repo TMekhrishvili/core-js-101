@@ -271,7 +271,7 @@ function isCreditCardNumber(/* ccn */) {
 function getDigitalRoot(num) {
   const strNum = String(num);
   if (strNum.length === 1) return Number(strNum);
-  const arr = strNum.split('').map(value => Number(value));
+  const arr = strNum.split('').map((value) => Number(value));
   return getDigitalRoot(arr.reduce((a, b) => a + b));
 }
 
@@ -322,8 +322,8 @@ function isBracketsBalanced(/* str */) {
  *    365, 4  => '11231'
  *    365, 10 => '365'
  */
-function toNaryString(/* num, n */) {
-  throw new Error('Not implemented');
+function toNaryString(num, n) {
+  return num.toString(n);
 }
 
 
